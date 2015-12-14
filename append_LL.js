@@ -1,14 +1,8 @@
 function LinkedList() {
 
-    var Node = function(element){ // {1}
-        this.element = element;
-        this.next = null;
-    };
+    this.length = 0; // {2}
+    this.head = null; // {3}
 
-    var length = 0; // {2}
-    var head = null; // {3}
-
-    this.append = function(element){};
     this.insert = function(position, element){};
     this.removeAt = function(position){};
     this.remove = function(element){};
@@ -19,15 +13,19 @@ function LinkedList() {
     this.print = function(){};
 }
 
+function Node (element){ // {1}
+    this.element = element;
+    this.next = null;
+}
 
-this.append = function(element){
+LinkedList.prototype.append = function(element){
     var node = new Node(element), //{1}
         current; //{2}
 
-    if (head === null){ //first node on list //{3}
-        head = node;
+    if (this.head === null){ //first node on list //{3}
+        this.head = node;
     } else {
-        current = head; //{4}
+        current = this.head; //{4}
         //loop the list until find last item
         while(current.next){
             current = current.next;
@@ -35,5 +33,11 @@ this.append = function(element){
         //get last item and assign next to node to make the link
         current.next = node; //{5}
     }
-    length++; //update size of list //{6}
+    this.length++; //update size of list //{6}
 };
+
+var list = new LinkedList();
+list.append(15);
+list.append(10);
+
+console.log(list.head);
