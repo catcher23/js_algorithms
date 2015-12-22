@@ -3,23 +3,23 @@ function LinkedList() {
     this.length = 0; // {2}
     this.head = null; // {3}
 
-    this.insert = function(position, element){};
+    this.insert = function(position, data){};
     this.removeAt = function(position){};
-    this.remove = function(element){};
-    this.indexOf = function(element){};
+    this.remove = function(data){};
+    this.indexOf = function(data){};
     this.isEmpty = function() {};
     this.size = function() {};
     this.toString = function(){};
     this.print = function(){};
 }
 
-function Node (element){ // {1}
-    this.element = element;
+function Node (data){ // {1}
+    this.data = data;
     this.next = null;
 }
 
-LinkedList.prototype.append = function(element){
-    var node = new Node(element), //{1}
+LinkedList.prototype.append = function(data){
+    var node = new Node(data), //{1}
         current; //{2}
 
     if (this.head === null){ //first node on list //{3}
