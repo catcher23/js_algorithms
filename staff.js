@@ -1,0 +1,34 @@
+var arr =
+[
+  'allegri',
+  'bilic',
+  'cabral',
+  'dossantos',
+  'francesco',
+  'gasperini',
+  'hughes',
+  'koeman',
+  'lopespereira',
+  'lopetegui',
+  'mandorlini',
+  'maran',
+  'martinez',
+  'mcclaren',
+  'monk',
+  'pardew',
+  'peterson',
+  'peterson',
+  'pinheiro',
+  'pioli',
+  'pochettino',
+  'pulis',
+  'reja',
+  'rodgers',
+  'sanchezflores',
+  'sherwood',
+  'vangaal',
+  'ventura',
+  'wenger'
+];
+
+console.log(arr.sort());
