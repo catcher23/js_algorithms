@@ -1,5 +1,17 @@
-function rotationPoint(arr) {
-  
+function rotationPoint(arr, num) {
+  var pivot = Math.floor(arr.length/2);
+  if (arr[pivot] < arr[0]) {
+    var word = arr[pivot];
+    var wordPrior = arr[pivot - 1];
+    if (wordPrior > word) {
+      return num + pivot;
+    } else {
+      rotationPoint(arr.slice(0, pivot));
+    }
+  } else {
+    num += pivot;
+    rotationPoint(arr.slice(pivot), num);
+  }
 }
 
 console.log(rotationPoint(
@@ -15,7 +27,7 @@ console.log(rotationPoint(
     'engender',
     'karpatka',
     'othellolagkage',
-  ]
+  ], 0
 ));
 
 // I opened up a dictionary to a page in the middle and started flipping through,
