@@ -30,6 +30,8 @@ console.log(rotationPoint(
   ], 0
 ));
 
+// O(lgn) time and O(1)O(1) space, just like binary search.
+
 // I opened up a dictionary to a page in the middle and started flipping through,
 // looking for words I didn't know. I put each word I didn't know at increasing
 // indices in a huge array I created in memory. When I reached the end of the
