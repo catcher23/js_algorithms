@@ -7,7 +7,7 @@ function largestBST(root) {
 }
 
 function secondLargest(root) {
-  if (!root_node) {
+  if (!root) {
     return 'empty tree';
   }
   if (root.right.right) {
