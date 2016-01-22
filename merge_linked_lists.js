@@ -1,5 +1,5 @@
-function Node(data, next) {
-  this.data = data;
+function Node(value, next) {
+  this.value = value;
   this.next = next;
 }
 
@@ -20,7 +20,7 @@ function merge (L1, L2) {
 
   while (L1 !== null && L2 !== null) {
         console.log(L3);
-      if (L1.data <= L2.data) {
+      if (L1.value <= L2.value) {
         prev.next = L1;
         L1 = L1.next;
       } else {

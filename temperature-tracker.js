@@ -5,7 +5,7 @@
   this.totalSum = 0;
   this.mean = null;
   this.mode = null;
-  this.occurrences = new Hash(0);
+  this.occurrences = {};
   this.maxOccurences = 0;
 
   this.insert = function(temperature) {

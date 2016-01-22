@@ -1,7 +1,13 @@
 function Stack() {
   var items = [];
+  var max;
+  var max2;
   this.push = function(el) {
     items.push(el);
+    if (el === null || el > max) {
+      max2 = max;
+      max = el;
+    }
   };
   this.pop = function(){
       return items.pop();
