@@ -13,6 +13,8 @@ function letterCombos(numbers) {
 
 }
 console.log(letterCombos('23'));
+console.log(letterCombos('2'));
+console.log(letterCombos('234'));
 // Given a digit string, return all possible letter combinations that the
 // number could represent.
 // Input:Digit string "23"
