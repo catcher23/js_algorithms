@@ -16,8 +16,8 @@ var canJump = function(nums) {
 
           if(positions.indexOf(currentPos+pos) !== -1) {
             console.log('found');
+              jump = true;
               return true;
-              var jump = true;
           }
        });
     currentPos = currentPos += 1;
