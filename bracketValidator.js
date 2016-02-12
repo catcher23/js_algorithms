@@ -1,4 +1,4 @@
-function isValid (input) {
+function isValid (values) {
 
   var
   bracketHash = {
@@ -19,8 +19,8 @@ function isValid (input) {
   postBrackets.add(']');
   postBrackets.add(')');
 
-  for (i = 0; i < input.length; i++) {
-    char = input[i];
+  for (i = 0; i < values.length; i++) {
+    char = values[i];
     if (preBrackets.has(char)) {
       stack.push(char);
     } else if (postBrackets.has(char)) {

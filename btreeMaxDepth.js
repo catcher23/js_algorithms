@@ -12,10 +12,10 @@ function TreeNode(val) {
 var maxDepth = function(root) {
   var depth = 0,
   nodes = [];
-  if (root === null || root ===[0]) {
-    return 0;
-  }
-  nodes.push([root, 0]);
+  if (!root) {
+  return 0;
+}
+nodes.push([root, 0]);
 
   while(nodes.length > 0) {
     nodeObj = nodes.pop;
