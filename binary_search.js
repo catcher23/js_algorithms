@@ -3,14 +3,14 @@ function binarySearch(arr, target) {
   if (arr[pivot] === target) {
     return pivot;
   } else if (arr[pivot] > target) {
-    console.log(arr);
-    return sortedArrays(arr.slice(0, pivot),5);
-  } else if (arr[pivot] < target) {
-    console.log(arr);
-     return pivot + sortedArrays(arr.slice(pivot),5);
+      return binarySearch(arr.slice(0, pivot), target);
   } else {
-    return -1;
+    result = arr.length > 1 ? binarySearch(arr.slice(pivot), target) : -1;
+    if (result !== -1) {
+      result += pivot;
+    }
+    return result;
   }
 }
 
-console.log(binarySearch([1,2,3,5,8,11,49,50,90,99], 11));
+console.log(binarySearch([1,2,3,5,8,11,49,50,90,99],2));
