@@ -31,7 +31,7 @@ LinkedList.prototype.append = function(value){
             current = current.next;
         }
         //get last item and assign next to node to make the link
-        // current.next = node; //{5}
+        current.next = node; //{5}
     }
     this.length += 1; //update size of list //{6}
 };

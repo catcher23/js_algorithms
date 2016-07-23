@@ -1,0 +1,28 @@
+<!-- html -->
+<p class="button" onclick="toggle_visibility('hideMe')">Show/hide</p>
+<div id="hideMe">I want to hide this by pressing the button above</div>
+<!-- js -->
+function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'block' || e.style.display=='') {
+      e.style.display = 'none';
+    } else {
+      e.style.display = 'block';
+    }
+}
+<!-- css -->
+.button {
+    display: block;
+    height: 20px;
+    width: 100px;
+    background: lightgreen;
+    text-align: center;
+    padding: 5px;
+    font: 15px Tahoma;
+    border: 1px solid black;
+    text-decoration: none;
+    list-style:none;
+    margin: 10px 0px 10px 0px;
+}
+
+<!-- http://jsfiddle.net/fyUJc/40/ -->

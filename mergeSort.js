@@ -1,14 +1,3 @@
-function merge(left, right) {
-  var merged = [];
-
-  while (left.length > 0 && right.length > 0) {
-    var nextItem = (left[0] < right[0]) ? left.shift() : right.shift();
-    merged.push(nextItem);
-  }
-
-  return merged.concat(left, right);
-}
-
 function mergeSort(array) {
   if (array.length < 2) {
     return array;
@@ -22,4 +11,14 @@ function mergeSort(array) {
   }
 }
 
+function merge(left, right) {
+  var merged = [];
+
+  while (left.length > 0 && right.length > 0) {
+    var nextItem = (left[0] < right[0]) ? left.shift() : right.shift();
+    merged.push(nextItem);
+  }
+
+  return merged.concat(left, right);
+}
 console.log("mergeSort([4, 5, 2, 3, 1]) = " + mergeSort([4, 5, 2, 3, 1]));

@@ -1,20 +1,21 @@
-  function makeChange(amount, coins){
-    var change, bestChange, i, count;
-    if (amount === 0) {
-      return [];
-    }
-    for (i = 0; i < coins.length; i++) {
-      if (coins[i] <= amount) {
-        change = [].concat([coins[i]]).concat(makeChange(amount - coins[i], coins));
-
-      }
-      if (!bestChange || change.count < bestChange.count) {
-        bestChange = change;
-      }
-    }
-return bestChange;
+function makeChange(amount, coins){
+  var change, bestChange, i, count, coin;
+  if (amount === 0) {
+    return [];
   }
-  console.log(makeChange(32, [25,10,5,1]));
+  for (i = 0; i < coins.length; i++) {
+    coin = coins[i];
+    if (coin <= amount) {
+      change = [].concat(coin, makeChange(amount - coin, coins));
+    }
+    if (!bestChange || change.length < bestChange.length) {
+      bestChange = change;
+    }
+  }
+  return bestChange;
+}
+console.log(makeChange(32, [25,10,5,1]));
+console.log(makeChange(5, [1,3]));
 //
 //   Write a function that, given:
 //
