@@ -8,18 +8,18 @@
 // // each house, determine the maximum amount of money you can rob tonight without
 // // alerting the police.
 //
-// var rob = function(nums) {
-//     var prevMax = max = 0, i, temp;
-//     for (i = 0; i < nums.length; i++) {
-//         temp = max;
-//         max = prevMax + nums[i] > max ? prevMax + nums[i] : max;
-//         prevMax = temp;
-//     }
-//     return max;
-// };
-//
-// console.log(rob([1]));
-//
+var rob = function(nums) {
+    var prevMax = 0, max = 0, i, temp;
+    for (i = 0; i < nums.length; i++) {
+        temp = max;
+        max = prevMax + nums[i] > max ? prevMax + nums[i] : max;
+        prevMax = temp;
+    }
+    return max;
+};
+
+console.log(rob([1]));
+
 // Time complexity : O(n)O(n). Assume that nn is the number of houses, the time
 // complexity is O(n)O(n).
 // Space complexity : O(1)O(1).

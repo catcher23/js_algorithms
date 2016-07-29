@@ -1,5 +1,5 @@
 function binarySearch(arr, target) {
-  var pivot = Math.floor(arr.length/2);
+  var pivot = Math.floor(arr.length/2), result;
   if (arr[pivot] === target) {
     return pivot;
   } else if (arr[pivot] > target) {
@@ -13,4 +13,5 @@ function binarySearch(arr, target) {
   }
 }
 
-console.log(binarySearch([1,2,3,5,8,11,49,50,90,99],2));
+console.log(binarySearch([1,2,3,5,8,11,49,50,90,99],5));
+console.log(binarySearch([1,2,3,5,8,11,49,50,90,99],50));

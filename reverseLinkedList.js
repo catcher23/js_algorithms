@@ -19,16 +19,13 @@ function LinkedList() {
 }
 
 LinkedList.prototype.reverse = function(head) {
-  var current = head,
-  previous,
-  next;
-
-  while (current) {
-    next = current.next;
-    current.next = prevous;
-
-    previous = current;
-    current = next;
+  if (head === null) return [];
+  var curr = head, prev, next;
+  while (curr !== null) {
+      next = curr.next;
+      curr.next = prev;
+      prev = curr;
+      curr = next;
   }
-  return previous;
+  return prev;
 };
